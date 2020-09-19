@@ -1,0 +1,16 @@
+block variables
+  - pageTitle = "Test"
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    title=pageTitle
+    link(rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png")
+  body
+    block content
+      include components/test-component/test-component.pug
+        
+      .index
+        .index__menu
+          +test-component({src: './img/avatar-1.png'})
