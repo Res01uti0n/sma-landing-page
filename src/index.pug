@@ -7,7 +7,28 @@ html(lang="en")
     meta(charset="utf-8")
     title=pageTitle
     link(rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png")
+    link(href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet")
   body
+    include components/header/header.pug
+    include components/promo/promo.pug
+    include components/what-we-offer/what-we-offer.pug
+    include components/introduction/introduction.pug
+    include components/steps/steps.pug
+    include components/packages/packages.pug
+    include components/footer/footer.pug
+
+    +header({logo: './img/logo.svg'})
+
+    main
+      +promo({promoImg: './img/promo.svg'})
+      +what-we-offer({promoImg: './img/promo.svg'})
+      +introduction
+      +steps
+      +packages
+    
+    +footer
+      
+      
     block content
       include components/test-component/test-component.pug
         
